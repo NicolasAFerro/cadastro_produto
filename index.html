@@ -16,91 +16,142 @@
     <main class="container mt-3">
       <section>
         <div class="display-6">Formulário de Cadastros</div>
-        <div class="row"></div>
-        <div class="col-md-10 offset-md-1">
-          <form>
-            <div class="row mb-3 mt-3">
-              <label for="inputName" class="col-sm-2 col-form-label"
-                >Nome</label
-              >
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputName" />
-              </div>
-            </div>
-            <div class="row mb-3 mt-3">
-              <label for="inputDescription" class="col-sm-2 col-form-label"
-                >Descrição</label
-              >
-              <div class="col-sm-10">
-                <input type="text" class="form-control" id="inputDescription" />
-              </div>
-            </div>
-
-            <div class="row mb-3 mt-3">
-              <label for="inputPrice" class="col-sm-2 col-form-label"
-                >Preço</label
-              >
-              <div class="col-sm-4">
-                <input type="text" class="form-control" id="inputPrice" />
-              </div>
-
-              <label for="selectCategory" class="col-sm-2 col-form-label"
-                >Categoria</label
-              >
-              <div class="col-sm-4">
-                <select
-                  class="form-select"
-                  aria-label="Selecione uma Categoria"
-                  id="selectCategory"
+        <div class="row">
+          <div class="col-md-10 offset-md-1">
+            <form>
+              <div class="row mb-3 mt-3">
+                <label for="inputName" class="col-sm-2 col-form-label"
+                  >Nome</label
                 >
-                  <option selected>Escolha</option>
-                  <option value="1">Nacional</option>
-                  <option value="2">Importado</option>
-                  <option value="3">Produção Própria</option>
-                </select>
-              </div>
-            </div>
-            <div class="row mb-3 mt-3">
-              <label for="inputPrice" class="col-sm-2 col-form-label"
-                >Opções</label
-              >
-              <div class="col-sm-4">
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="checkBoxPromotion"
-                  />
-                  <label class="form-check-label" for="checkBoxPromotion">
-                    Promoção
-                  </label>
-                </div>
-                <div class="form-check">
-                  <input
-                    class="form-check-input"
-                    type="checkbox"
-                    value=""
-                    id="checkBoxLancamento"
-                  />
-                  <label class="form-check-label" for="checkBoxLancamento">
-                    Lançamento
-                  </label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control" id="inputName" />
                 </div>
               </div>
-            </div>
-            <div class="row mb-3 mt-3">
-              <div class="col-sm-4">
-                <button type="submit" class="btn btn-primary">Cadastrar</button>
+              <div class="row mb-3 mt-3">
+                <label for="inputDescription" class="col-sm-2 col-form-label"
+                  >Descrição</label
+                >
+                <div class="col-sm-10">
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="inputDescription"
+                  />
+                </div>
               </div>
-            </div>
-          </form>
+
+              <div class="row mb-3 mt-3">
+                <label for="inputPrice" class="col-sm-2 col-form-label"
+                  >Preço</label
+                >
+                <div class="col-sm-4">
+                  <input type="text" class="form-control" id="inputPrice" />
+                </div>
+
+                <label for="selectCategory" class="col-sm-2 col-form-label"
+                  >Categoria</label
+                >
+                <div class="col-sm-4">
+                  <select
+                    class="form-select"
+                    aria-label="Selecione uma Categoria"
+                    id="selectCategory"
+                  >
+                    <option selected>Escolha</option>
+                    <option value="1">Nacional</option>
+                    <option value="2">Importado</option>
+                    <option value="3">Produção Própria</option>
+                  </select>
+                </div>
+              </div>
+              <div class="row mb-3 mt-3">
+                <label class="col-sm-2 col-form-label">Opções</label>
+                <div class="col-sm-4">
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="checkBoxPromotion"
+                    />
+                    <label class="form-check-label" for="checkBoxPromotion">
+                      Promoção
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input
+                      class="form-check-input"
+                      type="checkbox"
+                      value=""
+                      id="checkBoxLancamento"
+                    />
+                    <label class="form-check-label" for="checkBoxLancamento">
+                      Lançamento
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="row mb-3 mt-3">
+                <div class="col-sm-4">
+                  <button type="submit" class="btn btn-primary">
+                    Cadastrar
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </section>
       <hr />
       <section>
         <div class="display-6">Produtos Cadastrados</div>
       </section>
+      <div class="row">
+        <div class="col-md-10 offset-md-1">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Descrição</th>
+                <th scope="col">Preço</th>
+                <th scope="col">Categoria</th>
+                <th scope="col">Opções</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Computador M1-TX</td>
+                <td>Intel i7, 16GB, SSD 256, HD 1TB</td>
+                <td>4.900,00</td>
+                <td>Nacional</td>
+                <td>
+                  <span class="badge text-bg-success">P</span>
+                  <span class="badge text-bg-primary">L</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">2</th>
+                <td>Computador M1-TX</td>
+                <td>Intel i7, 32GB, SSD 512, HD 1TB</td>
+                <td>5.900,00</td>
+                <td>Importado</td>
+                <td><span class="badge text-bg-primary">L</span></td>
+              </tr>
+              <tr>
+                <th scope="row">3</th>
+                <td>Computador M1</td>
+                <td>Intel i5, 8GB, HD 1TB</td>
+                <td>2.900,00</td>
+                <td>Produção Própria</td>
+                <td></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <br /><br /><br /><br /><br /><br /><br />
     </main>
 
     <footer class="bg-secondary text-center text=white fixed-bottom">
