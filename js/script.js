@@ -58,7 +58,9 @@ function addNewRow(prod){
 
     var idNode=document.createTextNode(prod.id);  
     var nameNode=document.createTextNode(prod.name);
-    var descriptionNode=document.createTextNode(prod.description); 
+   
+
+
     var priceNode=document.createTextNode(formatter.format(prod.price));  
     
     var categoria=categories[(prod.category)-1].name;
@@ -68,19 +70,23 @@ function addNewRow(prod){
 
     var options='';
     if(prod.new){ 
-       options='<span class="badge text-bg-primary me-3">L</span>';
+       options='<span class="badge text-bg-primary d-none d-md-table-cell me-3">L</span>';
     }         
     if(prod.promotion) { 
-        options+='<span class="badge text-bg-success">P</span';    
+        options+='<span class="badge text-bg-success d-none d-md-table-cell">P</span';    
     }
-        
+     
 
 
     newRow.insertCell().appendChild(idNode);  
-    newRow.insertCell().appendChild(nameNode);  
-    newRow.insertCell().appendChild(descriptionNode); 
+    newRow.insertCell().appendChild(nameNode);   
     newRow.insertCell().appendChild(priceNode);
     newRow.insertCell().appendChild(categoryNode);
+    var descriptionNode=document.createTextNode(prod.description);  
+    var cell= newRow.insertCell(); 
+    cell.className='d-none d-md-table-cell';
+    cell.appendChild(descriptionNode); 
+    
 
     newRow.insertCell().innerHTML=options; 
 
