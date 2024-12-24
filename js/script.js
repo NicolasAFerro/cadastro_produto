@@ -1,3 +1,5 @@
+
+$("#inputPrice").mask('000.000.000.000.000,00', {reverse: true});
 var products = [
     {
         id: 1,
@@ -47,17 +49,22 @@ function loadProducts(){
 function addNewRow(prod){ 
     var table = document.getElementById("productsTable"); 
     
-    var newRow=table.insertRow();
+    var newRow=table.insertRow(); 
+
+    var formatter= new Intl.NumberFormat('pt-br',{
+        style:'currency', 
+        currency:'BRL',
+    });
 
     var idNode=document.createTextNode(prod.id);  
     var nameNode=document.createTextNode(prod.name);
     var descriptionNode=document.createTextNode(prod.description); 
-    var priceNode=document.createTextNode(prod.price);  
+    var priceNode=document.createTextNode(formatter.format(prod.price));  
     
     var categoria=categories[(prod.category)-1].name;
     var categoryNode=document.createTextNode(categoria); 
 
-    
+  
 
     var options='';
     if(prod.new){ 
