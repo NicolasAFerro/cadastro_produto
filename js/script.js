@@ -86,3 +86,25 @@ function addNewRow(prod){
 
    
 }
+function save(){ 
+    try{  
+        var prod= {
+            id: products.length+1,
+            name: document.getElementById("inputName").value,
+            description: document.getElementById("inputDescription").value,
+            price: document.getElementById("inputPrice").value.replace(/\./g, '').replace(',', '.'),
+            category: document.getElementById("selectCategory").value,
+            promotion: document.getElementById("checkBoxPromotion").checked,
+            new: document.getElementById("checkBoxLancamento").checked
+        }; 
+        addNewRow(prod); 
+        products.push(prod); 
+        document.getElementById("formProducts").reset();
+    }
+    catch(exeception ){ 
+        console.log(exeception);
+    }
+   
+
+
+}
